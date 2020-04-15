@@ -1,0 +1,63 @@
+<view class="swiper-container">
+	<block wx:if="{{is_longin}}">
+		<swiper style="height: {{clientHeight?clientHeight+'px':'auto'}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" current="{{swiperCurrent}}" bindchange="swiperChange" vertical="{{vertical}}" class="swiper">
+			<swiper-item class="swiper-1">
+				<view class="prompt-top">
+					<image src="/images/img_shjiantou_fds.png" class="prompt-top-image"></image>
+				</view>
+			</swiper-item>
+			<swiper-item class="swiper-2">
+				<view class="prompt-top">
+					<image src="/images/img_shjiantou_fds.png" class="prompt-top-image"></image>
+				</view>
+			</swiper-item>
+			<swiper-item class="swiper-3">
+				<view class="prompt-top">
+					<image src="/images/img_shjiantou_fds.png" class="prompt-top-image"></image>
+				</view>
+			</swiper-item>
+			<swiper-item class="swiper-4">
+				<view class="prompt-top">
+					<image src="/images/img_shjiantou_fds.png" class="prompt-top-image"></image>
+				</view>
+			</swiper-item>
+			<swiper-item class="swiper-5">
+				<view class="prompt-top">
+					<image src="/images/img_shjiantou_fds.png" class="prompt-top-image"></image>
+				</view>
+			</swiper-item>
+			<swiper-item class="swiper-6">
+				<view class="prompt-top">
+					<image src="/images/img_shjiantou_fds.png" class="prompt-top-image"></image>
+				</view>
+			</swiper-item>
+			<swiper-item class="swiper-7">
+				<image src="/images/logo.png" class="logoImg" />
+				<image src="/images/img_hgswuetwut.png" class="tit-img-1"></image>
+				<image src="/images/img_fgdjsfgkjdf.png" class="tit-img-2 "></image>
+				<!-- <view class="title1">让每个孩子更健康的发育</view>
+			<view class="title2">从足部开始</view>
+			<view class="basic">
+				<view>服务地址：</view>
+				<view>西安市未央区凤城九路经开万科中心15楼</view>
+				<view>服务电话：</view>
+				<view>029-6888 2888</view>
+				<view>上班时间：</view>
+				<view>每天（早9：00--晚6：00）</view>
+			</view> -->
+				<map id="map" covers="{{covers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="17" show-compass="true"></map>
+				<!-- <view class="title2 title-last">（谢谢观看）</view> -->
+				<image src="/images/img_hgfhdsgfhsda.png" class="tit-img-3"></image>
+			</swiper-item>
+		</swiper>
+	</block>
+	<block wx:else>
+		<view class="longin-page" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+			<image src="/images/logo2.png" class="logoImg"></image>
+			<button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+				<image src="/images/wx.png" class="but-icon-longin"></image>
+				授权登录
+			</button>
+		</view>
+	</block>
+</view>

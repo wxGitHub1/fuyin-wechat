@@ -1,0 +1,181 @@
+/* pages/index/home.wxss */
+
+swiper {
+  height: 100%;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-container .swiper {
+  /* height: 100rpx; */
+  position: relative;
+}
+.swiper-container .longin-page {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background:#fff;
+  z-index: 2;
+}
+.swiper-container .longin-page button{
+  margin-top:30vh;
+}
+.swiper-container .longin-page .logoImg {
+  width: 384rpx;
+  height: 156rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20vh;
+}
+/* .swiper-container .swiper .img {
+  width: 100%;
+  height: 100%;
+} */
+
+.swiper-container .swiper .prompt-top {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 56rpx;
+  bottom: 0;
+  text-align: center;
+}
+
+.swiper-container .swiper .prompt-top-image {
+  height: 50rpx;
+  width: 60rpx;
+  animation: myfirst 1.5s linear infinite;
+  position: relative;
+}
+
+@keyframes myfirst {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: 30rpx;
+  }
+}
+
+.swiper-container .swiper .swiper-1 {
+  background: url(http://192.168.3.155:8087/files/wx/1.jpg) no-repeat ;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.swiper-container .swiper .swiper-2 {
+  background: url(http://192.168.3.155:8087/files/wx/2.jpg) no-repeat ;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.swiper-container .swiper .swiper-3 {
+  background: url(http://192.168.3.155:8087/files/wx/3.jpg) no-repeat ;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.swiper-container .swiper .swiper-4 {
+  background: url(http://192.168.3.155:8087/files/wx/4.jpg) no-repeat ;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.swiper-container .swiper .swiper-5 {
+  background: url(http://192.168.3.155:8087/files/wx/5.jpg) no-repeat ;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.swiper-container .swiper .swiper-6 {
+  background: url(http://192.168.3.155:8087/files/wx/6.jpg) no-repeat ;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.swiper-container .swiper .swiper-7 {
+  background: #A3B952;
+  box-sizing: border-box;
+  padding: 0px 10%;
+}
+
+.swiper-container .swiper .swiper-7 .logoImg {
+  width: 214rpx;
+  height: 89rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 88rpx;
+  margin-bottom: 53rpx;
+}
+
+.swiper-container .swiper .swiper-7 .tit-img-1 {
+  width: 510rpx;
+  height: 124rpx;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+}
+
+.swiper-container .swiper .swiper-7 .tit-img-2 {
+  width: 590rpx;
+  height: 336rpx;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24rpx;
+}
+
+.swiper-container .swiper .swiper-7 .tit-img-3 {
+  width: 541rpx;
+  height: 46rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 47rpx;
+}
+
+/* .swiper-container .swiper .swiper-7 .title1 {
+  color: #fff;
+  text-align: justify;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.swiper-container .swiper .swiper-7 .title2 {
+  color: #fff;
+  text-align: justify;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 50rpx;
+}
+
+.swiper-container .swiper .swiper-7 .title2::after,.title1::after {
+  display: inline-block;
+  width: 100%;
+  content: '';
+}
+.swiper-container .swiper .swiper-7 .basic {
+  border: #fff solid 1px;
+  border-radius: 10rpx;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-top: 30rpx;
+}
+.swiper-container .swiper .swiper-7 .basic view{
+  margin-top: 20rpx;
+} */
+.swiper-container .swiper .swiper-7 #map {
+  width: 100%;
+  height: 347rpx;
+  margin-top: 24rpx;
+}
+
+/* .swiper-container .swiper .swiper-7 .title-last{
+  margin-top: 47rpx;
+} */
+.but-icon-longin{
+  width:40rpx;
+  height:40rpx;
+  vertical-align:middle
+}
