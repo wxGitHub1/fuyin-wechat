@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function (q) {
+    console.log("加载页面所带的参数↓")
     console.log(q)
     const scene = decodeURIComponent(q.scene)
     // 展示本地存储能力
