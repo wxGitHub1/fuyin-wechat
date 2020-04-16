@@ -10,4 +10,7 @@
 	<map id="map" covers="{{covers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" style="width: 80%; height: 300rpx;"></map>
 	<button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
 	<button bindtap="clickMe" style="margin-top:20rpx" type="primary">跳转到home页面</button>
+	<button bindtap="clickMe1" style="margin-top:20rpx" type="primary">点击测试</button>
+	<button bindtap="clickMe2" style="margin-top:20rpx" type="primary">获取access_token</button>
+	<button bindtap="clickMe3" style="margin-top:20rpx" type="primary">获取二维码图片</button>
 </view>

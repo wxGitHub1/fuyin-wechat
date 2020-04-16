@@ -20,7 +20,7 @@ swiper {
   z-index: 2;
 }
 .swiper-container .longin-page button{
-  margin-top:30vh;
+  margin-top:15vh;
 }
 .swiper-container .longin-page .logoImg {
   width: 384rpx;
@@ -178,4 +178,10 @@ swiper {
   width:40rpx;
   height:40rpx;
   vertical-align:middle
+}
+.text-center{
+  text-align: center;
+  margin-top: 80rpx;
+  font-size: 30rpx;
+  color: #FFCA28;
 }
