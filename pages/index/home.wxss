@@ -14,14 +14,15 @@ swiper {
 }
 .swiper-container .longin-page {
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   background:#fff;
-  z-index: 2;
+  box-sizing: border-box;
+  padding-top: 1rpx;
 }
-.swiper-container .longin-page button{
+/* .swiper-container .longin-page button{
   margin-top:15vh;
-}
+} */
 .swiper-container .longin-page .logoImg {
   width: 384rpx;
   height: 156rpx;
@@ -62,32 +63,32 @@ swiper {
 
 .swiper-container .swiper .swiper-1 {
   background: url(https://fuyinkangfu.com:8085/files/wx/1.jpg) no-repeat ;
-  background-size: 100% auto;
+  background-size: 750rpx 1334rpx;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-2 {
   background: url(https://fuyinkangfu.com:8085/files/wx/2.jpg) no-repeat ;
-  background-size: 100% 100%;
+  background-size: 750rpx 1334rpx;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-3 {
   background: url(https://fuyinkangfu.com:8085/files/wx/3.jpg) no-repeat ;
-  background-size: 100% 100%;
+  background-size: 750rpx 1334rpx;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-4 {
   background: url(https://fuyinkangfu.com:8085/files/wx/4.jpg) no-repeat ;
-  background-size: 100% 100%;
+  background-size: 750rpx 1334rpx;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-5 {
   background: url(https://fuyinkangfu.com:8085/files/wx/5.jpg) no-repeat ;
-  background-size: 100% 100%;
+  background-size: 750rpx 1334rpx;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-6 {
   background: url(https://fuyinkangfu.com:8085/files/wx/6.jpg) no-repeat ;
-  background-size: 100% 100%;
+  background-size: 750rpx 1334rpx;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-7 {
@@ -98,7 +99,7 @@ swiper {
 
 .swiper-container .swiper .swiper-7 .logoImg {
   width: 214rpx;
-  height: 89rpx;
+  height: 88rpx;
   display: block;
   margin: 0 auto;
   margin-top: 88rpx;
@@ -106,8 +107,8 @@ swiper {
 }
 
 .swiper-container .swiper .swiper-7 .tit-img-1 {
-  width: 510rpx;
-  height: 124rpx;
+  width: 450rpx;
+  height: 128rpx;
   display: block;
   margin: 0 auto;
   margin-bottom: 30rpx;
@@ -115,7 +116,7 @@ swiper {
 
 .swiper-container .swiper .swiper-7 .tit-img-2 {
   width: 590rpx;
-  height: 336rpx;
+  height: 376rpx;
   display: block;
   margin: 0 auto;
   margin-bottom: 24rpx;
@@ -129,62 +130,122 @@ swiper {
   margin-top: 47rpx;
 }
 
-/* .swiper-container .swiper .swiper-7 .title1 {
-  color: #fff;
-  text-align: justify;
-  width: 100%;
-  height: 60rpx;
-  line-height: 60rpx;
-  font-size: 30rpx;
-  margin-bottom: 20rpx;
-}
 
-.swiper-container .swiper .swiper-7 .title2 {
-  color: #fff;
-  text-align: justify;
-  width: 100%;
-  height: 80rpx;
-  line-height: 80rpx;
-  font-size: 50rpx;
-}
-
-.swiper-container .swiper .swiper-7 .title2::after,.title1::after {
-  display: inline-block;
-  width: 100%;
-  content: '';
-}
-.swiper-container .swiper .swiper-7 .basic {
-  border: #fff solid 1px;
-  border-radius: 10rpx;
-  color: #fff;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 5px;
-  margin-top: 30rpx;
-}
-.swiper-container .swiper .swiper-7 .basic view{
-  margin-top: 20rpx;
-} */
 .swiper-container .swiper .swiper-7 #map {
   width: 100%;
   height: 347rpx;
   margin-top: 24rpx;
   position: relative;
 }
-
-/* .swiper-container .swiper .swiper-7 .title-last{
-  margin-top: 47rpx;
-} */
-.but-icon-longin{
-  width:40rpx;
-  height:40rpx;
-  vertical-align:middle
-}
-.text-center{
+/* .text-center{
   text-align: center;
   margin-top: 80rpx;
   font-size: 30rpx;
   color: #FFCA28;
+} */
+.page1-but{
+  width: 100%;
+  position: absolute;
+  bottom: 42rpx;
+}  
+.page1-text{
+  width: 100%;
+  position: absolute;
+  bottom: 166rpx;
+  text-align: center;
+}  
+.page1-text text{
+  font-size: 30rpx;
+  padding-left: 50rpx;
+  position: relative;
+  color: #4B4B4B;
+}  
+.page1-text text:nth-child(2){
+  margin-left: 10rpx;
+}  
+.page1-text text::after{
+  content: '';
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left:10rpx;
+  top: 5rpx;
+  background: #FCB830;
+  border-radius: 50%;
+}  
+#login-but{
+  background: #A1BA50;
+  width: 614rpx;
+  height: 82rpx;
+  border-radius:42rpx;
+  font-size:34rpx;
+}
+.page1-img1{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 232rpx;
+  height: 254rpx;
+}
+.page1-img2{
+  position: absolute;
+  top: 106rpx;
+  left: 68rpx;
+  width: 360rpx;
+  height: 150rpx;
+}
+.page1-img3{
+  position: absolute;
+  top: 308rpx;
+  left: 50rpx;
+  width: 632rpx;
+  height: 32rpx;
+}
+.page1-img4{
+  position: absolute;
+  top: 364rpx;
+  left: 30rpx;
+  width: 664rpx;
+  height: 690rpx;
+}
+.page1-img5{
+  position: absolute;
+  top: 402rpx;
+  right: 30rpx;
+  width:206rpx;
+  height: 206rpx;
+}
+.page1-img6{
+  position: absolute;
+  top: 340rpx;
+  left: 156rpx;
+  width:292rpx;
+  height: 200rpx;
+}
+.page1-img7{
+  position: absolute;
+  top: 846rpx;
+  left: 76rpx;
+  width:206rpx;
+  height: 214rpx;
+}
+.page1-img8{
+  position: absolute;
+  top: 986rpx;
+  right: 60rpx;
+  width:342rpx;
+  height: 96rpx;
+}
+.page1-img9{
+  position: absolute;
+  top: 768rpx;
+  right: 42rpx;
+  width:168rpx;
+  height: 132rpx;
+}
+.page-img image{
+  height: 100%;
+  width: 100%;
 }
 /********地图按钮样式********/
 .cover-view {

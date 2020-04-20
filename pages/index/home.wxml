@@ -35,34 +35,53 @@
 				<image src="/images/logo.png" class="logoImg" />
 				<image src="/images/img_hgswuetwut.png" class="tit-img-1"></image>
 				<image src="/images/img_fgdjsfgkjdf.png" class="tit-img-2 "></image>
-				<!-- <view class="title1">让每个孩子更健康的发育</view>
-				<view class="title2">从足部开始</view>
-				<view class="basic">
-					<view>服务地址：</view>
-					<view>西安市未央区凤城九路经开万科中心15楼</view>
-					<view>服务电话：</view>
-					<view>029-6888 2888</view>
-					<view>上班时间：</view>
-					<view>每天（早9：00--晚6：00）</view>
-				</view> -->
+
 				<map id="map" covers="{{covers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-compass="true">
 					<view class="cover-view">
 						<view class="flex-item demo-text-1" bindtap="daohang">导航</view>
 					</view>
 				</map>
-				<!-- <view class="title2 title-last">（谢谢观看）</view> -->
 				<image src="/images/img_hgfhdsgfhsda.png" class="tit-img-3"></image>
 			</swiper-item>
 		</swiper>
 	</block>
 	<block wx:else>
 		<view class="longin-page" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
-			<image src="/images/logo2.png" class="logoImg"></image>
-			<view class="text-center">请用户授权登录否则无法查看小程序</view>
-			<button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
-				<image src="/images/wx.png" class="but-icon-longin"></image>
-				授权登录
-			</button>
+			<!-- <image src="/images/logo2.png" class="logoImg"></image> -->
+			<view class="page1-img1 page-img">
+				<image src="/images/page1/9.png"></image>
+			</view>
+			<view class="page1-img2 page-img">
+				<image src="/images/page1/10.png"></image>
+			</view>
+			<view class="page1-img3 page-img">
+				<image src="/images/page1/8.png"></image>
+			</view>
+			<view class="page1-img4 page-img">
+				<image src="/images/page1/1.png"></image>
+			</view>
+			<view class="page1-img5 page-img">
+				<image src="/images/page1/2.png"></image>
+			</view>
+			<view class="page1-img6 page-img">
+				<image src="/images/page1/6.png"></image>
+			</view>
+			<view class="page1-img7 page-img">
+				<image src="/images/page1/3.png"></image>
+			</view>
+			<view class="page1-img8 page-img">
+				<image src="/images/page1/4.png"></image>
+			</view>
+			<view class="page1-img9 page-img">
+				<image src="/images/page1/5.png"></image>
+			</view>
+			<view class="page1-text">
+				<text>登录获取产品信息</text>	
+				<text>仅支持现场定制</text>	
+			</view>
+			<view class="page1-but">
+				<button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" id="login-but">登录查看</button>
+			</view>
 		</view>
 	</block>
 </view>

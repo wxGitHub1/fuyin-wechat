@@ -1,13 +1,12 @@
 {
   "pages":[
-    "pages/index/home",
-    "pages/index/index"
-    
+    "pages/index/home"
   ],
   "window":{
+    "navigationStyle": "custom",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "发育型防护气垫",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",

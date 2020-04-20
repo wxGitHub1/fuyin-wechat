@@ -1,4 +1,6 @@
 // // pages/index/home.js
+const app = getApp()
+
 Page({
   /**
    * 页面的初始数据
@@ -19,7 +21,6 @@ Page({
       longitude: 108.9483207500,
       iconPath: '/images/location.png'
     }]
-    // links: ['../user/user', '../user/user', '../user/user']
   },
   //导航
   daohang:function(){
@@ -28,8 +29,8 @@ Page({
       type: 'wgs84', 
       success: function (res) {
         wx.openLocation({//​使用微信内置地图查看位置。
-          latitude:that.data.latitude, //34.3491318800,//要去的纬度-地址
-          longitude: that.data.longitude, //108.9483207500,//要去的经度-地址
+          latitude:that.data.latitude, //要去的纬度-地址
+          longitude: that.data.longitude,//要去的经度-地址
           name: "经开万科中心",
           address: '未央区未央路301号'
         })
@@ -110,7 +111,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (query) {
     var that = this
     wx.getSystemInfo({
       success: function (res) {
@@ -119,21 +120,21 @@ Page({
         });
       }
     })
-    wx.checkSession({
-      success () {
-        //session_key 未过期，并且在本生命周期一直有效
-        that.setData({
-          is_longin: true
-        })
-      },
-      fail () {
-        // session_key 已经失效，需要重新执行登录流程
-        // wx.login() //重新登录
-        that.setData({
-          is_longin: false
-        })
-      }
-    })
+    // wx.checkSession({
+    //   success () {
+    //     //session_key 未过期，并且在本生命周期一直有效
+    //     that.setData({
+    //       is_longin: true
+    //     })
+    //   },
+    //   fail () {
+    //     // session_key 已经失效，需要重新执行登录流程
+    //     // wx.login() //重新登录
+    //     that.setData({
+    //       is_longin: false
+    //     })
+    //   }
+    // })
   },
 })
 // Page({
