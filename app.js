@@ -1,8 +1,26 @@
 //app.js
 App({
+  globalData:{
+      serverUrl:"https://fuyinkangfu.com"
+  },
   onLaunch: function (q) {
+    const scene = decodeURIComponent(q.scene)
     console.log("加载页面所带的参数↓")
     console.log(q)
+    console.log(scene)
+    var id=q.query.id
+    wx.setStorageSync('doctorId',id)
+    // wx.showModal({
+    //   title: '提示',
+    //   content: 'q1',
+    //   success (res) {
+    //     if (res.confirm) {
+    //       console.log('用户点击确定')
+    //     } else if (res.cancel) {
+    //       console.log('用户点击取消')
+    //     }
+    //   }
+    // })
     // const scene = decodeURIComponent(q.scene)
     // // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []
@@ -11,30 +29,30 @@ App({
     // 登录
     // wx.login({
     //   success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // console.log(res.code)
-        // var data = {
-        //   appid: 'wxc90d2f11aa9a5d97',
-        //   secret: '36190d2f9ea02baa6593f26b8b3b05b0',
-        //   js_code: res.code,
-        //   grant_type: 'authorization_code'
-        // }
-        // // var that=this;
-        // // var jsCode=res.code
-        // wx.request({
-        //   url: 'https://api.weixin.qq.com/sns/jscode2session',
-        //   data: data,
-        //   header: {
-        //     'content-type': 'application/json'
-        //   },
-        //   success: function (res) {
-        //     console.log(res)
-        //     console.log("openid：" + res.data.openid);
-        //     console.log("session_key：" + res.data.session_key);
-        //     wx.setStorageSync('session_key', res.data.session_key)
-        //     wx.setStorageSync('openid', res.data.openid)
-        //   }
-        // })
+    //     //发送 res.code 到后台换取 openId, sessionKey, unionId
+    //     console.log(res.code)
+    //     var data = {
+    //       appid: 'wxc90d2f11aa9a5d97',
+    //       secret: '36190d2f9ea02baa6593f26b8b3b05b0',
+    //       js_code: res.code,
+    //       grant_type: 'authorization_code'
+    //     }
+    //     // var that=this;
+    //     // var jsCode=res.code
+    //     wx.request({
+    //       url: 'https://api.weixin.qq.com/sns/jscode2session',
+    //       data: data,
+    //       header: {
+    //         'content-type': 'application/json'
+    //       },
+    //       success: function (res) {
+    //         console.log(res)
+    //         console.log("openid：" + res.data.openid);
+    //         console.log("session_key：" + res.data.session_key);
+    //         wx.setStorageSync('session_key', res.data.session_key)
+    //         wx.setStorageSync('openid', res.data.openid)
+    //       }
+    //     })
     //   },
     //   fail: err => {
     //     console.log(err)

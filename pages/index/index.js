@@ -17,6 +17,22 @@ Page({
       iconPath: '/images/location.png'
     }]
   },
+  daohang:function(){
+    console.log("开始↓")
+    wx.getLocation({
+      type: 'wgs84', 
+      success: function (res) {
+        console.log("获取成功")
+        console.log("res")
+        wx.openLocation({//​使用微信内置地图查看位置。
+          latitude: 34.3491318800,//要去的纬度-地址
+          longitude: 108.9483207500,//要去的经度-地址
+          name: "未央区未央路301号",
+          address: '经开万科中心'
+        })
+      }
+    })
+  },
   clickMe:function(){
     wx.navigateTo({
       url: '/pages/index/home',

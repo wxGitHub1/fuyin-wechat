@@ -7,7 +7,15 @@
 			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 		</block>
 	</view>
-	<map id="map" covers="{{covers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" style="width: 80%; height: 300rpx;"></map>
+	<map id="map" covers="{{covers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" style="width: 80%; height: 300rpx;">
+		<cover-view class="cover-view">
+			<!-- <cover-view class="container"> -->
+				<!-- <cover-view class="flex-wrp" > -->
+					<cover-view class="flex-item demo-text-1" bindtap="daohang">导航</cover-view>
+				<!-- </cover-view> -->
+			<!-- </cover-view> -->
+		</cover-view>
+	</map>
 	<button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
 	<button bindtap="clickMe" style="margin-top:20rpx" type="primary">跳转到home页面</button>
 	<button bindtap="clickMe1" style="margin-top:20rpx" type="primary">点击测试</button>

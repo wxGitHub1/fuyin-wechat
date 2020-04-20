@@ -45,7 +45,11 @@
 					<view>上班时间：</view>
 					<view>每天（早9：00--晚6：00）</view>
 				</view> -->
-				<map id="map" covers="{{covers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="17" show-compass="true"></map>
+				<map id="map" covers="{{covers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-compass="true">
+					<view class="cover-view">
+						<view class="flex-item demo-text-1" bindtap="daohang">导航</view>
+					</view>
+				</map>
 				<!-- <view class="title2 title-last">（谢谢观看）</view> -->
 				<image src="/images/img_hgfhdsgfhsda.png" class="tit-img-3"></image>
 			</swiper-item>

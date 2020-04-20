@@ -21,6 +21,21 @@ Page({
     }]
     // links: ['../user/user', '../user/user', '../user/user']
   },
+  //导航
+  daohang:function(){
+    var that=this
+    wx.getLocation({
+      type: 'wgs84', 
+      success: function (res) {
+        wx.openLocation({//​使用微信内置地图查看位置。
+          latitude:that.data.latitude, //34.3491318800,//要去的纬度-地址
+          longitude: that.data.longitude, //108.9483207500,//要去的经度-地址
+          name: "经开万科中心",
+          address: '未央区未央路301号'
+        })
+      }
+    })
+  },
   // 登录+授权获取手机号
   getPhoneNumber(e) {
     var that = this
@@ -33,11 +48,12 @@ Page({
       wx.login({
         success: res => {
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
-          console.log(res.code)
+          console.log("code:"+res.code)
           wx.request({
             url: 'https://fuyinkangfu.com:8085/wx/wxGetPhone',
             method: "POST",
             data: {
+              doctorId:wx.getStorageSync('doctorId'),
               js_code: res.code,
               encrypted: e.detail.encryptedData,
               iv: e.detail.iv,
@@ -55,46 +71,12 @@ Page({
               that.setData({
                 is_longin: true
               })
+
             },
             fail: function (err) {
               console.log(err)
             }
           })
-          // console.log(e)
-          // console.log("e.detail:" + e.detail)
-          // console.log("errMsg:" + e.detail.errMsg)
-          // console.log("iv:" + e.detail.iv)
-          // console.log("encryptedData:" + e.detail.encryptedData)
-          // console.log("session_key:" + wx.getStorageSync('session_key'))
-          // console.log("res.data.openid:" + wx.getStorageSync('openid'))
-          // var data = {
-          //   openid: wx.getStorageSync('openid'),
-          //   encrypted: e.detail.encryptedData,
-          //   iv: e.detail.iv
-          // }
-          // console.log(data)
-          // wx.request({
-          //   url: 'https://192.168.3.155:8085/wx/wxGetPhone',
-          //   method: "POST",
-          //   data: data,
-          //   header: {
-          //     "Content-Type": "application/x-www-form-urlencoded"
-          //   },
-          //   success: function (res) {
-          //     console.log(res)
-          //     wx.showToast({
-          //       title: '授权成功！',
-          //       icon: 'success',
-          //       duration: 2000
-          //     })
-          //     that.setData({
-          //       is_longin: true
-          //     })
-          //   },
-          //   fail: function (err) {
-          //     console.log(err)
-          //   }
-          // })
         },
         fail: err => {
           console.log(err)
@@ -105,24 +87,6 @@ Page({
         is_longin: false
       })
     }
-    // console.log(res.code)
-    // wx.request({
-    //   url: 'https://api.weixin.qq.com/sns/jscode2session',
-    //   data: data,
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success: function (res) {
-    //     console.log(res)
-    //     console.log("openid：" + res.data.openid);
-    //     console.log("session_key：" + res.data.session_key);
-    //     wx.setStorageSync('session_key', res.data.session_key)
-    //     wx.setStorageSync('openid', res.data.openid)
-    //   }
-    // })
-
-
-
   },
   //轮播图的切换事件 
   swiperChange: function (e) {
@@ -173,46 +137,6 @@ Page({
   },
 })
 // Page({
-//   onShareAppMessage() {
-//     return {
-//       title: 'swiper',
-//       path: 'page/component/pages/swiper/swiper'
-//     }
-//   },
-//   /**
-//    * 页面的初始数据
-//    */
-//   data: {
-//     background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
-//     indicatorDots: true,
-//     vertical: false,
-//     autoplay: false,
-//     interval: 2000,
-//     duration: 500
-//   },
-//   changeIndicatorDots() {
-//     this.setData({
-//       indicatorDots: !this.data.indicatorDots
-//     })
-//   },
-
-//   changeAutoplay() {
-//     this.setData({
-//       autoplay: !this.data.autoplay
-//     })
-//   },
-
-//   intervalChange(e) {
-//     this.setData({
-//       interval: e.detail.value
-//     })
-//   },
-
-//   durationChange(e) {
-//     this.setData({
-//       duration: e.detail.value
-//     })
-//   },
 //   /**
 //    * 生命周期函数--监听页面加载
 //    */

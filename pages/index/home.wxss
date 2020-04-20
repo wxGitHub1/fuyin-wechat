@@ -61,32 +61,32 @@ swiper {
 }
 
 .swiper-container .swiper .swiper-1 {
-  background: url(http://192.168.3.155:8087/files/wx/1.jpg) no-repeat ;
-  background-size: 100% 100%;
+  background: url(https://fuyinkangfu.com:8085/files/wx/1.jpg) no-repeat ;
+  background-size: 100% auto;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-2 {
-  background: url(http://192.168.3.155:8087/files/wx/2.jpg) no-repeat ;
+  background: url(https://fuyinkangfu.com:8085/files/wx/2.jpg) no-repeat ;
   background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-3 {
-  background: url(http://192.168.3.155:8087/files/wx/3.jpg) no-repeat ;
+  background: url(https://fuyinkangfu.com:8085/files/wx/3.jpg) no-repeat ;
   background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-4 {
-  background: url(http://192.168.3.155:8087/files/wx/4.jpg) no-repeat ;
+  background: url(https://fuyinkangfu.com:8085/files/wx/4.jpg) no-repeat ;
   background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-5 {
-  background: url(http://192.168.3.155:8087/files/wx/5.jpg) no-repeat ;
+  background: url(https://fuyinkangfu.com:8085/files/wx/5.jpg) no-repeat ;
   background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-6 {
-  background: url(http://192.168.3.155:8087/files/wx/6.jpg) no-repeat ;
+  background: url(https://fuyinkangfu.com:8085/files/wx/6.jpg) no-repeat ;
   background-size: 100% 100%;
   box-sizing: border-box;
 }
@@ -169,6 +169,7 @@ swiper {
   width: 100%;
   height: 347rpx;
   margin-top: 24rpx;
+  position: relative;
 }
 
 /* .swiper-container .swiper .swiper-7 .title-last{
@@ -184,4 +185,18 @@ swiper {
   margin-top: 80rpx;
   font-size: 30rpx;
   color: #FFCA28;
+}
+/********地图按钮样式********/
+.cover-view {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  box-sizing: border-box;
+}
+.demo-text-1 {
+  background:#22A1FF;
+  padding: 10rpx 40rpx;
+  color: #fff;
+  border-radius: 10%;
+  font-size: 24rpx;
 }
