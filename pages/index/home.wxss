@@ -261,10 +261,10 @@ swiper {
 }
 .demo-text-1 {
   background:#22A1FF;
-  padding: 10rpx 40rpx;
+  padding: 20rpx 40rpx;
   color: #fff;
-  border-radius: 10%;
-  font-size: 24rpx;
+  border-radius: 20%;
+  font-size: 30rpx;
 }
 /*****高度大于736px的样式******/
 .img1-w-h{
