@@ -47,7 +47,7 @@ swiper {
 .swiper-container .swiper .prompt-top-image {
   height: 50rpx;
   width: 60rpx;
-  animation: myfirst 1.5s linear infinite;
+  animation: myfirst 1s linear infinite;
   position: relative;
 }
 
@@ -63,32 +63,32 @@ swiper {
 
 .swiper-container .swiper .swiper-1 {
   background: url(https://fuyinkangfu.com:8085/files/wx/1.jpg) no-repeat ;
-  background-size: 750rpx 1334rpx;
+  background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-2 {
   background: url(https://fuyinkangfu.com:8085/files/wx/2.jpg) no-repeat ;
-  background-size: 750rpx 1334rpx;
+  background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-3 {
   background: url(https://fuyinkangfu.com:8085/files/wx/3.jpg) no-repeat ;
-  background-size: 750rpx 1334rpx;
+  background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-4 {
   background: url(https://fuyinkangfu.com:8085/files/wx/4.jpg) no-repeat ;
-  background-size: 750rpx 1334rpx;
+  background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-5 {
   background: url(https://fuyinkangfu.com:8085/files/wx/5.jpg) no-repeat ;
-  background-size: 750rpx 1334rpx;
+  background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-6 {
   background: url(https://fuyinkangfu.com:8085/files/wx/6.jpg) no-repeat ;
-  background-size: 750rpx 1334rpx;
+  background-size: 100% 100%;
   box-sizing: border-box;
 }
 .swiper-container .swiper .swiper-7 {
@@ -102,8 +102,9 @@ swiper {
   height: 88rpx;
   display: block;
   margin: 0 auto;
-  margin-top: 88rpx;
+  margin-top: 120rpx;
   margin-bottom: 53rpx;
+  
 }
 
 .swiper-container .swiper .swiper-7 .tit-img-1 {
@@ -143,15 +144,19 @@ swiper {
   font-size: 30rpx;
   color: #FFCA28;
 } */
+/******登录页样式******/
 .page1-but{
   width: 100%;
   position: absolute;
-  bottom: 42rpx;
+  /* bottom: 42rpx; */
+  top: 1217rpx;
 }  
+
 .page1-text{
   width: 100%;
   position: absolute;
-  bottom: 166rpx;
+  /* bottom: 166rpx; */
+  top: 1140rpx;
   text-align: center;
 }  
 .page1-text text{
@@ -260,4 +265,66 @@ swiper {
   color: #fff;
   border-radius: 10%;
   font-size: 24rpx;
+}
+/*****高度大于736px的样式******/
+.img1-w-h{
+  width: 240rpx;
+  height: 263rpx;
+}
+.top-img2{
+  top:170rpx;
+}
+.top-img3{
+  top:370rpx;
+}
+.top-img4{
+  top:510rpx;
+}
+.top-img5{
+  top: 546rpx;
+}
+.top-img6{
+  top:502rpx;
+}
+.top-img7{
+  top: 962rpx;
+}
+.top-img8{
+  top: 1116rpx;
+}
+.top-img9{
+  top: 900rpx;
+}
+.top-text{
+  top: 1340rpx;
+}
+.top-but{
+  top: 1430rpx;
+}
+.swiper-container .swiper .swiper-7 .margin-t-154{
+  margin-top: 154rpx;
+}
+.swiper-container .swiper .swiper-1-1{
+  background: url(https://fuyinkangfu.com:8085/files/wx/1-1.jpg) no-repeat ;
+  background-size: 100% 100%;
+}
+.swiper-container .swiper .swiper-1-2{
+  background: url(https://fuyinkangfu.com:8085/files/wx/2-1.jpg) no-repeat ;
+  background-size: 100% 100%;
+}
+.swiper-container .swiper .swiper-1-3{
+  background: url(https://fuyinkangfu.com:8085/files/wx/3-1.jpg) no-repeat ;
+  background-size: 100% 100%;
+}
+.swiper-container .swiper .swiper-1-4{
+  background: url(https://fuyinkangfu.com:8085/files/wx/4-1.jpg) no-repeat ;
+  background-size: 100% 100%;
+}
+.swiper-container .swiper .swiper-1-5{
+  background: url(https://fuyinkangfu.com:8085/files/wx/5-1.jpg) no-repeat ;
+  background-size: 100% 100%;
+}
+.swiper-container .swiper .swiper-1-6{
+  background: url(https://fuyinkangfu.com:8085/files/wx/6-1.jpg) no-repeat ;
+  background-size: 100% 100%;
 }

@@ -1,38 +1,38 @@
 <view class="swiper-container">
 	<block wx:if="{{is_longin}}">
-		<swiper style="height: {{clientHeight?clientHeight+'px':'auto'}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" current="{{swiperCurrent}}" bindchange="swiperChange" vertical="{{vertical}}" class="swiper">
-			<swiper-item class="swiper-1">
+		<swiper style="height: {{clientHeight+'px'}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" current="{{swiperCurrent}}" bindchange="swiperChange" vertical="{{vertical}}" class="swiper">
+			<swiper-item class="swiper-1 {{clientHeight<=736?'swiper-1-1':''}}">
 				<view class="prompt-top">
 					<image src="{{imgUrls}}" class="prompt-top-image"></image>
 				</view>
 			</swiper-item>
-			<swiper-item class="swiper-2">
+			<swiper-item class="swiper-2 {{clientHeight<=736?'swiper-1-2':''}}">
 				<view class="prompt-top">
 					<image src="{{imgUrls}}" class="prompt-top-image"></image>
 				</view>
 			</swiper-item>
-			<swiper-item class="swiper-3">
+			<swiper-item class="swiper-3 {{clientHeight<=736?'swiper-1-3':''}}">
 				<view class="prompt-top">
 					<image src="{{imgUrls}}" class="prompt-top-image"></image>
 				</view>
 			</swiper-item>
-			<swiper-item class="swiper-4">
+			<swiper-item class="swiper-4 {{clientHeight<=736?'swiper-1-4':''}}">
 				<view class="prompt-top">
 					<image src="{{imgUrls}}" class="prompt-top-image"></image>
 				</view>
 			</swiper-item>
-			<swiper-item class="swiper-5">
+			<swiper-item class="swiper-5 {{clientHeight<=736?'swiper-1-5':''}}">
 				<view class="prompt-top">
 					<image src="{{imgUrls}}" class="prompt-top-image"></image>
 				</view>
 			</swiper-item>
-			<swiper-item class="swiper-6">
+			<swiper-item class="swiper-6 {{clientHeight<=736?'swiper-1-6':''}}">
 				<view class="prompt-top">
 					<image src="{{imgUrls}}" class="prompt-top-image"></image>
 				</view>
 			</swiper-item>
 			<swiper-item class="swiper-7">
-				<image src="/images/logo.png" class="logoImg" />
+				<image src="/images/logo.png" class="logoImg {{clientHeight>736?'margin-t-154':''}}" />
 				<image src="/images/img_hgswuetwut.png" class="tit-img-1"></image>
 				<image src="/images/img_fgdjsfgkjdf.png" class="tit-img-2 "></image>
 
@@ -46,40 +46,40 @@
 		</swiper>
 	</block>
 	<block wx:else>
-		<view class="longin-page" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+		<view class="longin-page" style="height: {{clientHeight+'px'}}">
 			<!-- <image src="/images/logo2.png" class="logoImg"></image> -->
-			<view class="page1-img1 page-img">
+			<view class="page1-img1 page-img {{clientHeight>736?'img1-w-h':''}}">
 				<image src="/images/page1/9.png"></image>
 			</view>
-			<view class="page1-img2 page-img">
+			<view class="page1-img2 page-img {{clientHeight>736?'top-img2':''}}">
 				<image src="/images/page1/10.png"></image>
 			</view>
-			<view class="page1-img3 page-img">
+			<view class="page1-img3 page-img {{clientHeight>736?'top-img3':''}}">
 				<image src="/images/page1/8.png"></image>
 			</view>
-			<view class="page1-img4 page-img">
+			<view class="page1-img4 page-img {{clientHeight>736?'top-img4':''}}">
 				<image src="/images/page1/1.png"></image>
 			</view>
-			<view class="page1-img5 page-img">
+			<view class="page1-img5 page-img {{clientHeight>736?'top-img5':''}}">
 				<image src="/images/page1/2.png"></image>
 			</view>
-			<view class="page1-img6 page-img">
+			<view class="page1-img6 page-img {{clientHeight>736?'top-img6':''}}">
 				<image src="/images/page1/6.png"></image>
 			</view>
-			<view class="page1-img7 page-img">
+			<view class="page1-img7 page-img {{clientHeight>736?'top-img7':''}}">
 				<image src="/images/page1/3.png"></image>
 			</view>
-			<view class="page1-img8 page-img">
+			<view class="page1-img8 page-img {{clientHeight>736?'top-img8':''}}">
 				<image src="/images/page1/4.png"></image>
 			</view>
-			<view class="page1-img9 page-img">
+			<view class="page1-img9 page-img {{clientHeight>736?'top-img9':''}}">
 				<image src="/images/page1/5.png"></image>
 			</view>
-			<view class="page1-text">
+			<view class="page1-text {{clientHeight>736?'top-text':''}}">
 				<text>登录获取产品信息</text>	
 				<text>仅支持现场定制</text>	
 			</view>
-			<view class="page1-but">
+			<view class="page1-but {{clientHeight>736?'top-but':''}}">
 				<button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" id="login-but">登录查看</button>
 			</view>
 		</view>

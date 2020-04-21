@@ -120,21 +120,21 @@ Page({
         });
       }
     })
-    // wx.checkSession({
-    //   success () {
-    //     //session_key 未过期，并且在本生命周期一直有效
-    //     that.setData({
-    //       is_longin: true
-    //     })
-    //   },
-    //   fail () {
-    //     // session_key 已经失效，需要重新执行登录流程
-    //     // wx.login() //重新登录
-    //     that.setData({
-    //       is_longin: false
-    //     })
-    //   }
-    // })
+    wx.checkSession({
+      success () {
+        //session_key 未过期，并且在本生命周期一直有效
+        that.setData({
+          is_longin: true
+        })
+      },
+      fail () {
+        // session_key 已经失效，需要重新执行登录流程
+        // wx.login() //重新登录
+        that.setData({
+          is_longin: false
+        })
+      }
+    })
   },
 })
 // Page({
