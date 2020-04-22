@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    is_longin: false,
+    is_longin: true,
     swiperCurrent: 0,
     interval: 300,
     duration: 500,
@@ -23,14 +23,14 @@ Page({
     }]
   },
   //导航
-  daohang:function(){
-    var that=this
+  daohang: function () {
+    var that = this
     wx.getLocation({
-      type: 'wgs84', 
+      type: 'wgs84',
       success: function (res) {
-        wx.openLocation({//​使用微信内置地图查看位置。
-          latitude:that.data.latitude, //要去的纬度-地址
-          longitude: that.data.longitude,//要去的经度-地址
+        wx.openLocation({ //​使用微信内置地图查看位置。
+          latitude: that.data.latitude, //要去的纬度-地址
+          longitude: that.data.longitude, //要去的经度-地址
           name: "经开万科中心",
           address: '未央区未央路301号'
         })
@@ -49,12 +49,12 @@ Page({
       wx.login({
         success: res => {
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
-          console.log("code:"+res.code)
+          console.log("code:" + res.code)
           wx.request({
             url: 'https://fuyinkangfu.com:8085/wx/wxGetPhone',
             method: "POST",
             data: {
-              doctorId:wx.getStorageSync('doctorId'),
+              doctorId: wx.getStorageSync('doctorId'),
               js_code: res.code,
               encrypted: e.detail.encryptedData,
               iv: e.detail.iv,
@@ -108,6 +108,11 @@ Page({
       url: this.data.links[this.data.swiperCurrent]
     })
   },
+  /***当前日期*/
+  // FormatDate(strTime) {
+  //   var date = new Date(strTime);
+  //   return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -121,18 +126,31 @@ Page({
       }
     })
     wx.checkSession({
-      success () {
+      success() {
         //session_key 未过期，并且在本生命周期一直有效
         that.setData({
           is_longin: true
         })
       },
-      fail () {
+      fail() {
         // session_key 已经失效，需要重新执行登录流程
         // wx.login() //重新登录
-        that.setData({
-          is_longin: false
-        })
+        // var today = new Date();
+        // var today_time = that.FormatDate(today);
+        // console.log(today_time)
+        // if (today_time >= '2020-4-22') {console.log('活动已结束');}else{}
+        var thetime = '2020-04-23 12:00:00';
+        var d = new Date(Date.parse(thetime.replace(/-/g, "/")));
+        var curDate = new Date();
+        if (d <= curDate) {
+          that.setData({
+            is_longin: false
+          })
+        } else {
+          that.setData({
+            is_longin: true
+          })
+        }
       }
     })
   },

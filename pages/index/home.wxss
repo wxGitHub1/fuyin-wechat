@@ -60,7 +60,7 @@ swiper {
     bottom: 30rpx;
   }
 }
-
+/**/
 .swiper-container .swiper .swiper-1 {
   background: url(https://fuyinkangfu.com:8085/files/wx/1.jpg) no-repeat ;
   background-size: 100% 100%;

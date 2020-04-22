@@ -14,6 +14,6 @@ App({
       wx.setStorageSync('doctorId', id)
     } else {
       wx.setStorageSync('doctorId', id)
-    } 
+    }
   },
 })
